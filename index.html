@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu Primeiro RPG de Teste</title>
+    <style>
+        body {
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh; /* Ocupa a altura total da tela */
+            background-color: #333; /* Fundo escuro para a página */
+        }
+        canvas {
+            border: 2px solid #555; /* Uma borda para ver a tela do jogo */
+            background-color: #000; /* Fundo preto para o jogo */
+        }
+        #game-info { /* Caixa de informações do jogo (HP, XP) */
+            position: absolute; /* Para que ela flutue sobre a tela */
+            top: 10px;
+            left: 10px;
+            background-color: rgba(0, 0, 0, 0.7); /* Fundo semi-transparente */
+            padding: 10px;
+            border-radius: 5px;
+            color: white; /* Texto branco */
+            font-family: sans-serif;
+            z-index: 10; /* Garante que fique acima do canvas */
+        }
+    </style>
+</head>
+<body>
+    <div id="game-info">
+        <p>HP: <span id="playerHp">100</span></p>
+        <p>XP: <span id="playerXp">0</span></p>
+        <p>Nível: <span id="playerLevel">1</span></p>
+    </div>
+    <canvas id="gameCanvas"></canvas> <script src="game.js"></script> </body>
+</html>
